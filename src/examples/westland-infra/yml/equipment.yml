@@ -18,5 +18,5 @@
 'dcterms:conformsTo':
   - '@id': https://modellen.netbeheernederland.nl/nbnl-equipment/3.0
 'dcterms:references':
-  - '@id': urn:uuid:5bdf9a6d-ef38-4c4d-a6ee-42a9accdec64
+  - '@id': urn:uuid:3ed60b10-4c15-47e0-b9fb-3fcadc2c1632
 '@graph':

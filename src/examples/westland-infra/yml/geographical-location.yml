@@ -19,10 +19,5 @@
   - '@id': https://modellen.netbeheernederland.nl/nbnl-geographical-location/1.3
 'dcterms:references':
   - '@id': urn:uuid:45505204-8a65-452e-a6d4-43cd87e15232
+  - '@id': urn:uuid:3ed60b10-4c15-47e0-b9fb-3fcadc2c1632
 '@graph':
-  # --- cim:CoordinateSystem --------------------------------------------------
-  - '@id': urn:uuid:8dabcb33-6555-4ad8-a7ba-f1fb162ae98c
-    '@type': cim:CoordinateSystem
-    cim:CoordinateSystem.crsUrn: "urn:ogc:def:crs:EPSG::4.3.2.6"
-    cim:IdentifiedObject.mRID: 8dabcb33-6555-4ad8-a7ba-f1fb162ae98c
-    cim:IdentifiedObject.name: "WGS84"
