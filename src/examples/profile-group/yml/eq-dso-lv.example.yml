@@ -146,3 +146,39 @@
     cim:IdentifiedObject.mRID: ea3a6b0c-991a-4bb7-909e-6e99ff0e1464
     nl:IdentifiedObject.europeanArticleNumberEAN: '800012345678901113'
     cim:IdentifiedObject.name: Overdrachtspunt (aggregatie)
+  # --- cim:EnergyConsumer ----------------------------------------------------
+  - '@id': urn:uuid:1f919cc8-e4d0-4ce2-99e9-7a9231adbc2f
+    '@type': cim:Terminal
+    cim:Terminal.ConductingEquipment:
+      '@id': urn:uuid:5312ea7c-0d7a-4dcb-a358-9a41addd9909
+    cim:IdentifiedObject.mRID: 1f919cc8-e4d0-4ce2-99e9-7a9231adbc2f
+  - '@id': urn:uuid:5312ea7c-0d7a-4dcb-a358-9a41addd9909
+    '@type': cim:EnergyConsumer
+    cim:Equipment.EquipmentContainer:
+      '@id': urn:uuid:ec42c648-fd67-47ac-86c5-c5771ff82dfe
+    cim:IdentifiedObject.mRID: 5312ea7c-0d7a-4dcb-a358-9a41addd9909
+  - '@id': urn:uuid:efc583a3-853d-49d6-9c99-b07e15240384
+    '@type': cim:UsagePoint
+    cim:UsagePoint.Equipments:
+      - '@id': urn:uuid:5312ea7c-0d7a-4dcb-a358-9a41addd9909
+    cim:IdentifiedObject.mRID: efc583a3-853d-49d6-9c99-b07e15240384
+    nl:IdentifiedObject.europeanArticleNumberEAN: '800012345678901114'
+    cim:IdentifiedObject.name: Overdrachtspunt
+  # --- cim:EnergyConsumer ----------------------------------------------------
+  - '@id': urn:uuid:493cee76-3e27-4f90-8e92-aa5f5bf74ea5
+    '@type': cim:Terminal
+    cim:Terminal.ConductingEquipment:
+      '@id': urn:uuid:96441975-f55c-4295-a5e4-26345767d024
+    cim:IdentifiedObject.mRID: 493cee76-3e27-4f90-8e92-aa5f5bf74ea5
+  - '@id': urn:uuid:96441975-f55c-4295-a5e4-26345767d024
+    '@type': cim:EnergyConsumer
+    cim:Equipment.EquipmentContainer:
+      '@id': urn:uuid:ec42c648-fd67-47ac-86c5-c5771ff82dfe
+    cim:IdentifiedObject.mRID: 96441975-f55c-4295-a5e4-26345767d024
+  - '@id': urn:uuid:9232a8a1-22ac-4653-ae76-dc5a96cca445
+    '@type': cim:UsagePoint
+    cim:UsagePoint.Equipments:
+      - '@id': urn:uuid:96441975-f55c-4295-a5e4-26345767d024
+    cim:IdentifiedObject.mRID: 9232a8a1-22ac-4653-ae76-dc5a96cca445
+    nl:IdentifiedObject.europeanArticleNumberEAN: '800012345678901115'
+    cim:IdentifiedObject.name: Overdrachtspunt

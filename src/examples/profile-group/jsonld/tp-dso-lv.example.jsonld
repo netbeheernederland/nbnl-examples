@@ -74,6 +74,30 @@
       },
       "cim:IdentifiedObject.mRID": "8c00e265-eb3b-4ec5-b34c-1faafaa7c613",
       "cim:IdentifiedObject.name": "PTE-PTE"
+    },
+    {
+      "@id": "urn:uuid:7ed10656-e338-4e8c-9a7c-f01727dec60a",
+      "@type": "cim:TopologicalNode",
+      "cim:TopologicalNode.Terminal": [
+        "urn:uuid:1f919cc8-e4d0-4ce2-99e9-7a9231adbc2f",
+        "urn:uuid:493cee76-3e27-4f90-8e92-aa5f5bf74ea5",
+        "urn:uuid:b5e07ab7-8132-485d-bc5a-db259e8b5fbe"
+      ],
+      "cim:IdentifiedObject.mRID": "7ed10656-e338-4e8c-9a7c-f01727dec60a"
+    },
+    {
+      "@id": "urn:uuid:1f03542d-d24f-45d2-a4af-581c2d7bd0fb",
+      "@type": "cim:BusNameMarker",
+      "cim:BusNameMarker.Terminal": [
+        "urn:uuid:1f919cc8-e4d0-4ce2-99e9-7a9231adbc2f",
+        "urn:uuid:493cee76-3e27-4f90-8e92-aa5f5bf74ea5",
+        "urn:uuid:b5e07ab7-8132-485d-bc5a-db259e8b5fbe"
+      ],
+      "cim:BusNameMarker.TopologicalNode": {
+        "@id": "urn:uuid:7ed10656-e338-4e8c-9a7c-f01727dec60a"
+      },
+      "cim:IdentifiedObject.mRID": "1f03542d-d24f-45d2-a4af-581c2d7bd0fb",
+      "cim:IdentifiedObject.name": "CP-PTE"
     }
   ]
 }
