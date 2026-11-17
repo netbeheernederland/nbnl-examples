@@ -12,6 +12,6 @@
       - urn:uuid:{{ uuid5('t_' + ean + pc + hn) }}
       - urn:uuid:{{ uuid5('t2_' + pt) }}
     cim:BusNameMarker.TopologicalNode:
-      '@id': urn:uuid:{{ uuid5('tn_' + ean + pc + hn + ssn + pt) }}
+      '@id': urn:uuid:{{ uuid5('tn_' + ean + pc + hn) }}
     cim:IdentifiedObject.mRID: {{ uuid5('bnm_' + ean + pc + hn) }}
     cim:IdentifiedObject.name: PTE-EC
