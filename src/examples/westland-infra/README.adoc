@@ -55,6 +55,3 @@ $ gen-linkml-profile convert yml/geographical-location.yml --out jsonld/geograph
 # TO-DO
 
 * no connection to TenneT `eu:BoundaryPoint`, as this requires a modelling decision (Team Semantiek)
-* add topology for PT-PT
-* add templates for metadata generation
-* update templates to remove `ssn` from `mRID` for `PowerTransformer`
