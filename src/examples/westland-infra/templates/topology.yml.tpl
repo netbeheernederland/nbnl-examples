@@ -1,3 +1,4 @@
+{%- set timestamp = strftime('%Y-%m-%dT%H:00:00.000Z') -%}
 '@context':
   linkml: https://w3id.org/linkml/
   cbs: https://www.cbs.nl/nl-nl/onze-diensten/methoden/begrippen/
@@ -8,16 +9,15 @@
   xsd: http://www.w3.org/2001/XMLSchema#
   github: https://github.com/
   dcterms: http://purl.org/dc/terms/
-'@id': urn:uuid:42d43090-aa14-40c6-abc0-4ffff9469f04
+'@id': urn:uuid:{{ uuid5('tp_' + timestamp) }}
 'dcterms:issued':
-  '@value': 2026-10-22T12:00:000Z
+  '@value': {{ timestamp }}
   '@type': xsd:dateTime
 'dcterms:publisher':
   '@id': urn:uuid:21ba2c21-33a7-487d-9618-789334963e62
   'dcterms:title': 'Westland Infra Netbeheer B.V.'
 'dcterms:conformsTo':
-  - '@id': https://modellen.netbeheernederland.nl/nbnl-geographical-location/1.3
+  - '@id': https://modellen.netbeheernederland.nl/nbnl-topology/2.0
 'dcterms:references':
-  - '@id': urn:uuid:45505204-8a65-452e-a6d4-43cd87e15232
-  - '@id': urn:uuid:3ed60b10-4c15-47e0-b9fb-3fcadc2c1632
+  - '@id': urn:uuid:{{ uuid5('eq_' + timestamp) }}
 '@graph':

@@ -4,6 +4,18 @@ Use the _upcoming_ version of _build-dp_ to run the commands below. Use the the
 directory containing this README as base directory for the container. If
 something doesn't work, look at paths first.
 
+## Metadata
+
+Create JSON-LD base files. `@id`-s are generated based on the current hour,
+avoid starting generation at `:59`.
+
+[source,bash]
+----
+$ echo 'timestamp'|gen-linkml-profile template --var timestamp templates/equipment.yml.tpl > yml/equipment.yml
+$ echo 'timestamp'|gen-linkml-profile template --var timestamp templates/topology.yml.tpl > yml/topology.yml
+$ echo 'timestamp'|gen-linkml-profile template --var timestamp templates/geographical-location.yml.tpl > yml/geographical-location.yml
+----
+
 # Convert to profiles
 
 ## Equipment (EQ)
@@ -20,6 +32,7 @@ $ csvcut -c 1,2,3 csv/Overdrachtspunten_met_klanten.csv|tail -n +2|gen-linkml-pr
 [source,bash]
 ----
 $ csvcut -c 1,2,3,5,4 csv/Overdrachtspunten_met_klanten.csv|tail -n +2|gen-linkml-profile template --var ean --var pc --var hn --var ssn --var pt templates/topology-ec.yml.tpl >> yml/topology.yml
+$ csvcut -c 1,3 csv/Koppeling_tussen_transformatoren.csv|tail -n +2|gen-linkml-profile template --var pte2 --var pte1 templates/topology-pt.yml.tpl >> yml/topology.yml
 ----
 
 ## GeographicalLocation (GL)
@@ -41,5 +54,7 @@ $ gen-linkml-profile convert yml/geographical-location.yml --out jsonld/geograph
 
 # TO-DO
 
-* No `TopologicalNode`-s for `PT-PT`, as the needed data (ssn+pt) is not available in the CSV. Only PT-name is provided
-* No connection to TenneT `eu:BoundaryPoint`, as this requires a modelling decision (Team Semantiek)
+* no connection to TenneT `eu:BoundaryPoint`, as this requires a modelling decision (Team Semantiek)
+* add topology for PT-PT
+* add templates for metadata generation
+* update templates to remove `ssn` from `mRID` for `PowerTransformer`

@@ -1,16 +1,15 @@
-  {% set pt = 'pt_' + ssn + '_' + pt -%}
   # --- cim:PowerTransformer --------------------------------------------------
-  - '@id': urn:uuid:{{ uuid5(pt) }}
+  - '@id': urn:uuid:{{ uuid5('pt_' + pt) }}
     '@type': cim:PowerTransformer
     cim:Equipment.EquipmentContainer:
       '@id': urn:uuid:{{ uuid5(ssn) }}
-    cim:IdentifiedObject.mRID: {{ uuid5(pt) }}
+    cim:IdentifiedObject.mRID: {{ uuid5('pt_' + pt) }}
     cim:IdentifiedObject.name: "{{ pt }}"
   # --- cim:PowerTransformerEnd (1) -------------------------------------------
   - '@id': urn:uuid:{{ uuid5('pte1_' + pt) }}
     '@type': cim:PowerTransformerEnd
     cim:PowerTransformerEnd.PowerTransformer:
-      '@id': urn:uuid:{{ uuid5(pt) }}
+      '@id': urn:uuid:{{ uuid5('pt_' + pt) }}
     cim:TransformerEnd.endNumber: 1
     cim:TransformerEnd.Terminal:
       '@id': urn:uuid:{{ uuid5('t1_' + pt) }}
@@ -43,13 +42,13 @@
     cim:Terminal.ConnectivityNode:
       '@id': urn:uuid:{{ uuid5('cn1_' + pt) }}
     cim:Terminal.ConductingEquipment:
-      '@id': urn:uuid:{{ uuid5(pt) }}
+      '@id': urn:uuid:{{ uuid5('pt_' + pt) }}
     cim:IdentifiedObject.mRID: {{ uuid5('t1_' + pt) }}
   # --- cim:PowerTransformerEnd (2) -------------------------------------------
   - '@id': urn:uuid:{{ uuid5('pte2_' + pt) }}
     '@type': cim:PowerTransformerEnd
     cim:PowerTransformerEnd.PowerTransformer:
-      '@id': urn:uuid:{{ uuid5(pt) }}
+      '@id': urn:uuid:{{ uuid5('pt_' + pt) }}
     cim:TransformerEnd.endNumber: 2
     cim:TransformerEnd.Terminal:
       '@id': urn:uuid:{{ uuid5('t2_' + pt) }}
@@ -82,5 +81,5 @@
     cim:Terminal.ConnectivityNode:
       '@id': urn:uuid:{{ uuid5('cn2_' + pt) }}
     cim:Terminal.ConductingEquipment:
-      '@id': urn:uuid:{{ uuid5(pt) }}
+      '@id': urn:uuid:{{ uuid5('pt_' + pt) }}
     cim:IdentifiedObject.mRID: {{ uuid5('t2_' + pt) }}
