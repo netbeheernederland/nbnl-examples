@@ -1,6 +1,8 @@
   # --- cim:EnergyConsumer ----------------------------------------------------
   - '@id': urn:uuid:{{ uuid5(ean + pc + hn) }}
     '@type': cim:EnergyConsumer
+    cim:Equipment.EquipmentContainer:
+      '@id': urn:uuid:{{ uuid5('vl2_' + pt) }}
     cim:IdentifiedObject.mRID: {{ uuid5(ean + pc + hn) }}
     cim:IdentifiedObject.name: {{pc }}/{{ hn }}
   # --- UsagePoint

@@ -24,7 +24,7 @@ $ echo 'timestamp'|gen-linkml-profile template --var timestamp templates/geograp
 ----
 $ csvcut -c 1 csv/Netstations.csv|tail -n +2|gen-linkml-profile template --var ssn templates/substation.yml.tpl >> yml/equipment.yml
 $ csvcut -c 1,2,3,4 csv/Transformator_stations.csv|tail -n +2|gen-linkml-profile template --var ssn --var pt --var pte1 --var pte2 templates/power-transformer.yml.tpl >> yml/equipment.yml
-$ csvcut -c 1,2,3 csv/Overdrachtspunten_met_klanten.csv|tail -n +2|gen-linkml-profile template --var ean --var pc --var hn templates/energy-consumer.yml.tpl >> yml/equipment.yml
+$ csvcut -c 1,2,3,4 csv/Overdrachtspunten_met_klanten.csv|tail -n +2|gen-linkml-profile template --var ean --var pc --var hn --var pt templates/energy-consumer.yml.tpl >> yml/equipment.yml
 ----
 
 ## Topology (TP)
