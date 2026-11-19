@@ -11,7 +11,7 @@
   dcterms: http://purl.org/dc/terms/
 '@id': urn:uuid:{{ uuid5('tp_' + timestamp) }}
 'dcterms:issued':
-  '@value': {{ timestamp }}
+  '@value': '{{ timestamp }}'
   '@type': xsd:dateTime
 'dcterms:publisher':
   '@id': urn:uuid:21ba2c21-33a7-487d-9618-789334963e62
